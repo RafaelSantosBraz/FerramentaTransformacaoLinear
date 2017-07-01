@@ -28,37 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Aplicar = new System.Windows.Forms.Button();
-            this.Descobrir = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicial));
+            this.botaoAplicar = new System.Windows.Forms.Button();
+            this.botaoDescobrir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Aplicar
+            // botaoAplicar
             // 
-            this.Aplicar.Location = new System.Drawing.Point(255, 230);
-            this.Aplicar.Name = "Aplicar";
-            this.Aplicar.Size = new System.Drawing.Size(141, 62);
-            this.Aplicar.TabIndex = 0;
-            this.Aplicar.Text = "Aplicar Transformação";
-            this.Aplicar.UseVisualStyleBackColor = true;
+            this.botaoAplicar.Location = new System.Drawing.Point(255, 230);
+            this.botaoAplicar.Name = "botaoAplicar";
+            this.botaoAplicar.Size = new System.Drawing.Size(141, 62);
+            this.botaoAplicar.TabIndex = 0;
+            this.botaoAplicar.Text = "Aplicar Transformação";
+            this.botaoAplicar.UseVisualStyleBackColor = true;
+            this.botaoAplicar.Click += new System.EventHandler(this.Aplicar_Click);
             // 
-            // Descobrir
+            // botaoDescobrir
             // 
-            this.Descobrir.Location = new System.Drawing.Point(402, 230);
-            this.Descobrir.Name = "Descobrir";
-            this.Descobrir.Size = new System.Drawing.Size(141, 62);
-            this.Descobrir.TabIndex = 1;
-            this.Descobrir.Text = "Descobrir Transformação";
-            this.Descobrir.UseVisualStyleBackColor = true;
+            this.botaoDescobrir.Location = new System.Drawing.Point(402, 230);
+            this.botaoDescobrir.Name = "botaoDescobrir";
+            this.botaoDescobrir.Size = new System.Drawing.Size(141, 62);
+            this.botaoDescobrir.TabIndex = 1;
+            this.botaoDescobrir.Text = "Descobrir Transformação";
+            this.botaoDescobrir.UseVisualStyleBackColor = true;
             // 
             // FormInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 318);
-            this.Controls.Add(this.Descobrir);
-            this.Controls.Add(this.Aplicar);
+            this.Controls.Add(this.botaoDescobrir);
+            this.Controls.Add(this.botaoAplicar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -70,8 +73,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Aplicar;
-        private System.Windows.Forms.Button Descobrir;
+        private System.Windows.Forms.Button botaoAplicar;
+        private System.Windows.Forms.Button botaoDescobrir;
     }
 }
 
