@@ -32,8 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.graficoAplicar = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.comboBoxEspaco = new System.Windows.Forms.ComboBox();
             this.textBoxFTE = new System.Windows.Forms.TextBox();
+            this.textBoxVetorInicial = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.graficoAplicar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,19 +56,6 @@
             this.graficoAplicar.Text = "chart1";
             this.graficoAplicar.Click += new System.EventHandler(this.chart1_Click);
             // 
-            // comboBoxEspaco
-            // 
-            this.comboBoxEspaco.FormattingEnabled = true;
-            this.comboBoxEspaco.Items.AddRange(new object[] {
-            "R",
-            "R²",
-            "R³"});
-            this.comboBoxEspaco.Location = new System.Drawing.Point(327, 86);
-            this.comboBoxEspaco.Name = "comboBoxEspaco";
-            this.comboBoxEspaco.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxEspaco.TabIndex = 1;
-            this.comboBoxEspaco.SelectedValueChanged += new System.EventHandler(this.comboBoxEspaco_SelectedValueChanged);
-            // 
             // textBoxFTE
             // 
             this.textBoxFTE.Location = new System.Drawing.Point(300, 153);
@@ -76,13 +63,20 @@
             this.textBoxFTE.Size = new System.Drawing.Size(171, 20);
             this.textBoxFTE.TabIndex = 2;
             // 
+            // textBoxVetorInicial
+            // 
+            this.textBoxVetorInicial.Location = new System.Drawing.Point(300, 127);
+            this.textBoxVetorInicial.Name = "textBoxVetorInicial";
+            this.textBoxVetorInicial.Size = new System.Drawing.Size(82, 20);
+            this.textBoxVetorInicial.TabIndex = 3;
+            // 
             // FormAplicar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 318);
+            this.Controls.Add(this.textBoxVetorInicial);
             this.Controls.Add(this.textBoxFTE);
-            this.Controls.Add(this.comboBoxEspaco);
             this.Controls.Add(this.graficoAplicar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -98,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoAplicar;
-        private System.Windows.Forms.ComboBox comboBoxEspaco;
         private System.Windows.Forms.TextBox textBoxFTE;
+        private System.Windows.Forms.TextBox textBoxVetorInicial;
     }
 }
