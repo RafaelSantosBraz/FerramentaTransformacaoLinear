@@ -16,5 +16,10 @@ namespace AplicacaoTransformacoesLineares
         {
             InitializeComponent();
         }
+
+        private void FormInicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
