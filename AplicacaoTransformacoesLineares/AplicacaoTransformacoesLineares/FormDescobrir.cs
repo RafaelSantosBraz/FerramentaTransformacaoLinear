@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AplicacaoTransformacoesLineares
 {
-    public partial class FormInicial : Form
+    public partial class FormDescobrir : Form
     {
-        public FormInicial()
+        public FormDescobrir()
         {
             InitializeComponent();
         }

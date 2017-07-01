@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoTransformacoesLineares
 {
-    partial class Form1
+    partial class FormInicial
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FormInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 629);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ferramenta de Transformações Lineares - Braz e Ricordi";
             this.ResumeLayout(false);

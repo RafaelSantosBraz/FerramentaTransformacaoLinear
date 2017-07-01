@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAplicar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAplicar.Designer.cs">
+      <DependentUpon>FormAplicar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDescobrir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDescobrir.Designer.cs">
+      <DependentUpon>FormDescobrir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
