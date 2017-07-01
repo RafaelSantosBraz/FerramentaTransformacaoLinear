@@ -34,9 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 691);
+            this.ClientSize = new System.Drawing.Size(985, 691);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormDescobrir";
-            this.Text = "FormDescobrir";
+            this.Text = "Encontrar função de Transformação Linear";
             this.ResumeLayout(false);
 
         }
