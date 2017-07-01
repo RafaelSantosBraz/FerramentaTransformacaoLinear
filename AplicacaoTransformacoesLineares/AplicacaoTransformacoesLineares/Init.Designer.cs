@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoTransformacoesLineares
 {
-    partial class FormAplicar
+    partial class Init
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FormAplicar
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 694);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "FormAplicar";
-            this.Text = "Aplicação de Transformação Linear";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAplicar_FormClosing);
-            this.Load += new System.EventHandler(this.FormAplicar_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "Init";
         }
 
         #endregion
