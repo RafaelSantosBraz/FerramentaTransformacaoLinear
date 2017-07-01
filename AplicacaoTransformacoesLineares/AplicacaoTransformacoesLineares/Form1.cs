@@ -15,7 +15,6 @@ namespace AplicacaoTransformacoesLineares
         public Form1()
         {
             InitializeComponent();
-            //teste
         }
     }
 }
