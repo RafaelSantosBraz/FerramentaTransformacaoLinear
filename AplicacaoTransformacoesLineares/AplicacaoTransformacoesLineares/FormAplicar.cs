@@ -37,19 +37,40 @@ namespace AplicacaoTransformacoesLineares
         {
             if (comboBoxEspaco.Text == "R")
             {
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorR.Visible = true;
+                //double result = Convert.ToDouble(new DataTable().Compute("1 + 0.5 * 7", null));
+
                 panelR.Visible = true;
-                //double result = Convert.ToDouble(new DataTable().Compute("1 + 2 * 7", null));
                 panelR2.Visible = false;
                 panelR3.Visible = false;
             }
             if (comboBoxEspaco.Text == "R²")
             {
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorR.Visible = true;
+
                 panelR.Visible = false;
                 panelR2.Visible = true;
                 panelR3.Visible = false;
             }
             if (comboBoxEspaco.Text == "R³")
             {
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorR.Visible = true;
+
                 panelR.Visible = false;
                 panelR2.Visible = false;
                 panelR3.Visible = true;
