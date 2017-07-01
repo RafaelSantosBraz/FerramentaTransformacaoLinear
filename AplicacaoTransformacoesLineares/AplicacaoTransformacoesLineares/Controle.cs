@@ -26,5 +26,10 @@ namespace AplicacaoTransformacoesLineares
         public Form TelaDescobrir { get => telaDescobrir; set => telaDescobrir = value; }
         public Form TelaInicial { get => telaInicial; set => telaInicial = value; }
         public Form TelaInit { get => telaInit; set => telaInit = value; }
+
+        public Boolean verificarTransformacaoLinear(String funcao)
+        {
+            return true;
+        }
     }
 }
