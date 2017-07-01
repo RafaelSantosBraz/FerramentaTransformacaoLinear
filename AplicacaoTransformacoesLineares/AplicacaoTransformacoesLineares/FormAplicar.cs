@@ -21,5 +21,10 @@ namespace AplicacaoTransformacoesLineares
         {
 
         }
+
+        private void comboBoxEspaco_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

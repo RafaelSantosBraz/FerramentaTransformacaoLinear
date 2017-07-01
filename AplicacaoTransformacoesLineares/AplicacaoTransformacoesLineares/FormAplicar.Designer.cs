@@ -33,6 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.graficoAplicar = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBoxEspaco = new System.Windows.Forms.ComboBox();
+            this.textBoxFTE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.graficoAplicar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,12 +67,21 @@
             this.comboBoxEspaco.Name = "comboBoxEspaco";
             this.comboBoxEspaco.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEspaco.TabIndex = 1;
+            this.comboBoxEspaco.SelectedValueChanged += new System.EventHandler(this.comboBoxEspaco_SelectedValueChanged);
+            // 
+            // textBoxFTE
+            // 
+            this.textBoxFTE.Location = new System.Drawing.Point(300, 153);
+            this.textBoxFTE.Name = "textBoxFTE";
+            this.textBoxFTE.Size = new System.Drawing.Size(171, 20);
+            this.textBoxFTE.TabIndex = 2;
             // 
             // FormAplicar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 318);
+            this.Controls.Add(this.textBoxFTE);
             this.Controls.Add(this.comboBoxEspaco);
             this.Controls.Add(this.graficoAplicar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -81,6 +91,7 @@
             this.Text = "Aplicação de Transformação Linear";
             ((System.ComponentModel.ISupportInitialize)(this.graficoAplicar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -88,5 +99,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoAplicar;
         private System.Windows.Forms.ComboBox comboBoxEspaco;
+        private System.Windows.Forms.TextBox textBoxFTE;
     }
 }
