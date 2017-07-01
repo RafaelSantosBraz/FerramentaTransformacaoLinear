@@ -17,12 +17,12 @@ namespace AplicacaoTransformacoesLineares
             InitializeComponent();
         }
 
-        private void FormAplicar_Load(object sender, EventArgs e)
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void FormAplicar_FormClosing(object sender, FormClosingEventArgs e)
+        private void comboBoxEspaco_SelectedValueChanged(object sender, EventArgs e)
         {
             
         }
