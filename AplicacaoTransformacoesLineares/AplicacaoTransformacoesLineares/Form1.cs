@@ -28,5 +28,16 @@ namespace AplicacaoTransformacoesLineares
             Init.Nucleo.TelaAplicar.Show();
             this.Visible = false;
         }
+
+        private void botaoDescobrir_Click(object sender, EventArgs e)
+        {
+            Init.Nucleo.TelaDescobrir.Show();
+            this.Visible = false;
+        }
+
+        private void FormInicial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Init.Nucleo.TelaInit.Dispose();
+        }
     }
 }

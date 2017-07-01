@@ -16,5 +16,11 @@ namespace AplicacaoTransformacoesLineares
         {
             InitializeComponent();
         }
+
+        private void FormDescobrir_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Init.Nucleo.TelaInicial.Show();
+            this.Dispose();
+        }
     }
 }

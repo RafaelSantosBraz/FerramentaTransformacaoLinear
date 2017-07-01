@@ -16,7 +16,7 @@ namespace AplicacaoTransformacoesLineares
 
         public Init()
         {
-            Nucleo = new Controle();
+            Nucleo = new Controle(this);
             InitializeComponent();
             this.Opacity = 0;
             Nucleo.TelaInicial.Show();

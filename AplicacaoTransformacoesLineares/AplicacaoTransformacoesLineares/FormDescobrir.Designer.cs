@@ -39,6 +39,7 @@
             this.MaximizeBox = false;
             this.Name = "FormDescobrir";
             this.Text = "Encontrar função de Transformação Linear";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDescobrir_FormClosing);
             this.ResumeLayout(false);
 
         }
