@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace AplicacaoTransformacoesLineares
 {
-    public partial class FormInicial : Form
+    public partial class Init : Form
     {
+        static Controle nucleo;
 
-        public FormInicial()
+        public Init()
         {
+            Nucleo = new Controle();
             InitializeComponent();
+            this.Opacity = 0;
+            Nucleo.TelaInicial.Show();
         }
 
-        private void FormInicial_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Aplicar_Click(object sender, EventArgs e)
-        {
-            Init.Nucleo.TelaAplicar.Show();
-            this.Visible = false;
-        }
+        public static Controle Nucleo { get => nucleo; set => nucleo = value; }
     }
 }
