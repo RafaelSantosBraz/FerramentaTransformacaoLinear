@@ -29,8 +29,8 @@ namespace AplicacaoTransformacoesLineares
 
         private void FormAplicar_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Init.Nucleo.TelaAplicar = new FormAplicar();
             Init.Nucleo.TelaInicial.Show();
-            this.Dispose();
         }
     }
 }
