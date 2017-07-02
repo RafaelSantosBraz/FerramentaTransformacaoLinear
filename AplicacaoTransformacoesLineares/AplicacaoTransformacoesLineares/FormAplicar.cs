@@ -35,43 +35,43 @@ namespace AplicacaoTransformacoesLineares
 
         private void comboBoxEspaco_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEspaco.Text == "R")
+            if (comboBoxEspacoOrigem.Text == "R")
             {
                 graficoAplicar.Visible = true;
                 label13.Visible = true;
                 label11.Visible = true;
                 label14.Visible = true;
                 textBoxFunc.Visible = true;
-                textBoxVetorR.Visible = true;
-                //double result = Convert.ToDouble(new DataTable().Compute("1 + 0.5 * 7", null));
-
-                panelR.Visible = true;
+                textBoxVetorResultante.Visible = true;
+                double result = Convert.ToDouble(new DataTable().Compute(Math.Pow(2,3)+" + 1 + 0.5 * 7", null));
+                textBoxVetorResultante.Text = result.ToString();
+                panelR1.Visible = true;
                 panelR2.Visible = false;
                 panelR3.Visible = false;
             }
-            if (comboBoxEspaco.Text == "R²")
+            if (comboBoxEspacoOrigem.Text == "R²")
             {
                 graficoAplicar.Visible = true;
                 label13.Visible = true;
                 label11.Visible = true;
                 label14.Visible = true;
                 textBoxFunc.Visible = true;
-                textBoxVetorR.Visible = true;
+                textBoxVetorResultante.Visible = true;
 
-                panelR.Visible = false;
+                panelR1.Visible = false;
                 panelR2.Visible = true;
                 panelR3.Visible = false;
             }
-            if (comboBoxEspaco.Text == "R³")
+            if (comboBoxEspacoOrigem.Text == "R³")
             {
                 graficoAplicar.Visible = true;
                 label13.Visible = true;
                 label11.Visible = true;
                 label14.Visible = true;
                 textBoxFunc.Visible = true;
-                textBoxVetorR.Visible = true;
+                textBoxVetorResultante.Visible = true;
 
-                panelR.Visible = false;
+                panelR1.Visible = false;
                 panelR2.Visible = false;
                 panelR3.Visible = true;
             }

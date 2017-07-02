@@ -33,8 +33,8 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAplicar));
             this.graficoAplicar = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.comboBoxEspaco = new System.Windows.Forms.ComboBox();
-            this.panelR = new System.Windows.Forms.Panel();
+            this.comboBoxEspacoOrigem = new System.Windows.Forms.ComboBox();
+            this.panelR1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,13 +54,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxFunc = new System.Windows.Forms.TextBox();
-            this.textBoxVetorR = new System.Windows.Forms.TextBox();
+            this.textBoxVetorResultante = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.graficoAplicar)).BeginInit();
-            this.panelR.SuspendLayout();
+            this.panelR1.SuspendLayout();
             this.panelR2.SuspendLayout();
             this.panelR3.SuspendLayout();
             this.SuspendLayout();
@@ -86,32 +86,32 @@
             this.graficoAplicar.Visible = false;
             this.graficoAplicar.Click += new System.EventHandler(this.chart1_Click);
             // 
-            // comboBoxEspaco
+            // comboBoxEspacoOrigem
             // 
-            this.comboBoxEspaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEspaco.FormattingEnabled = true;
-            this.comboBoxEspaco.Items.AddRange(new object[] {
+            this.comboBoxEspacoOrigem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEspacoOrigem.FormattingEnabled = true;
+            this.comboBoxEspacoOrigem.Items.AddRange(new object[] {
             "R",
             "R²",
             "R³"});
-            this.comboBoxEspaco.Location = new System.Drawing.Point(300, 79);
-            this.comboBoxEspaco.Name = "comboBoxEspaco";
-            this.comboBoxEspaco.Size = new System.Drawing.Size(58, 21);
-            this.comboBoxEspaco.TabIndex = 1;
-            this.comboBoxEspaco.DropDown += new System.EventHandler(this.chart1_Click);
-            this.comboBoxEspaco.SelectedIndexChanged += new System.EventHandler(this.comboBoxEspaco_SelectedIndexChanged);
-            this.comboBoxEspaco.SelectedValueChanged += new System.EventHandler(this.comboBoxEspaco_SelectedValueChanged);
+            this.comboBoxEspacoOrigem.Location = new System.Drawing.Point(300, 79);
+            this.comboBoxEspacoOrigem.Name = "comboBoxEspacoOrigem";
+            this.comboBoxEspacoOrigem.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxEspacoOrigem.TabIndex = 1;
+            this.comboBoxEspacoOrigem.DropDown += new System.EventHandler(this.chart1_Click);
+            this.comboBoxEspacoOrigem.SelectedIndexChanged += new System.EventHandler(this.comboBoxEspaco_SelectedIndexChanged);
+            this.comboBoxEspacoOrigem.SelectedValueChanged += new System.EventHandler(this.comboBoxEspaco_SelectedValueChanged);
             // 
-            // panelR
+            // panelR1
             // 
-            this.panelR.Controls.Add(this.textBox1);
-            this.panelR.Controls.Add(this.label2);
-            this.panelR.Controls.Add(this.label1);
-            this.panelR.Location = new System.Drawing.Point(300, 119);
-            this.panelR.Name = "panelR";
-            this.panelR.Size = new System.Drawing.Size(87, 32);
-            this.panelR.TabIndex = 2;
-            this.panelR.Visible = false;
+            this.panelR1.Controls.Add(this.textBox1);
+            this.panelR1.Controls.Add(this.label2);
+            this.panelR1.Controls.Add(this.label1);
+            this.panelR1.Location = new System.Drawing.Point(300, 119);
+            this.panelR1.Name = "panelR1";
+            this.panelR1.Size = new System.Drawing.Size(87, 32);
+            this.panelR1.TabIndex = 2;
+            this.panelR1.Visible = false;
             // 
             // textBox1
             // 
@@ -275,19 +275,27 @@
             // 
             // textBoxFunc
             // 
+            this.textBoxFunc.AutoCompleteCustomSource.AddRange(new string[] {
+            "f(x)=",
+            "f(x,y)=",
+            "f(x,y,z)="});
+            this.textBoxFunc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxFunc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBoxFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxFunc.Location = new System.Drawing.Point(300, 175);
             this.textBoxFunc.Name = "textBoxFunc";
             this.textBoxFunc.Size = new System.Drawing.Size(195, 20);
             this.textBoxFunc.TabIndex = 6;
             this.textBoxFunc.Visible = false;
             // 
-            // textBoxVetorR
+            // textBoxVetorResultante
             // 
-            this.textBoxVetorR.Location = new System.Drawing.Point(300, 214);
-            this.textBoxVetorR.Name = "textBoxVetorR";
-            this.textBoxVetorR.Size = new System.Drawing.Size(112, 20);
-            this.textBoxVetorR.TabIndex = 7;
-            this.textBoxVetorR.Visible = false;
+            this.textBoxVetorResultante.Location = new System.Drawing.Point(300, 214);
+            this.textBoxVetorResultante.Name = "textBoxVetorResultante";
+            this.textBoxVetorResultante.ReadOnly = true;
+            this.textBoxVetorResultante.Size = new System.Drawing.Size(112, 20);
+            this.textBoxVetorResultante.TabIndex = 7;
+            this.textBoxVetorResultante.Visible = false;
             // 
             // label11
             // 
@@ -332,18 +340,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(565, 318);
+            this.Controls.Add(this.panelR3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBoxVetorR);
-            this.Controls.Add(this.textBoxFunc);
-            this.Controls.Add(this.panelR3);
             this.Controls.Add(this.panelR2);
-            this.Controls.Add(this.panelR);
-            this.Controls.Add(this.comboBoxEspaco);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBoxVetorResultante);
+            this.Controls.Add(this.textBoxFunc);
+            this.Controls.Add(this.panelR1);
+            this.Controls.Add(this.comboBoxEspacoOrigem);
             this.Controls.Add(this.graficoAplicar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -354,8 +362,8 @@
             this.Text = "Aplicar Transformação Linear";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAplicar_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.graficoAplicar)).EndInit();
-            this.panelR.ResumeLayout(false);
-            this.panelR.PerformLayout();
+            this.panelR1.ResumeLayout(false);
+            this.panelR1.PerformLayout();
             this.panelR2.ResumeLayout(false);
             this.panelR2.PerformLayout();
             this.panelR3.ResumeLayout(false);
@@ -368,8 +376,8 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoAplicar;
-        private System.Windows.Forms.ComboBox comboBoxEspaco;
-        private System.Windows.Forms.Panel panelR;
+        private System.Windows.Forms.ComboBox comboBoxEspacoOrigem;
+        private System.Windows.Forms.Panel panelR1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -389,7 +397,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxFunc;
-        private System.Windows.Forms.TextBox textBoxVetorR;
+        private System.Windows.Forms.TextBox textBoxVetorResultante;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
