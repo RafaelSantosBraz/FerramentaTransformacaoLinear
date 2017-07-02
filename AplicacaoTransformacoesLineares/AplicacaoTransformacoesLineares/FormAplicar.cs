@@ -79,11 +79,14 @@ namespace AplicacaoTransformacoesLineares
         {
             Vetor u = new Vetor();
             u.X = 1;
-            u.Y = 2;
+            u.Y = 0;
+            u.Z = 0;
             Vetor v = new Vetor();
             v.X = 2;
-            v.Y = 3;
-            Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=x+y,x-y", u, v);
+            v.Y = 0;
+            v.Z = 0;
+            Boolean resp = Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=0.2*x", u, v);
+            Vetor r = Init.Nucleo.aplicarTransformacaoLinear("f(x,y)=0.2*x", u);
         }
     }
 }

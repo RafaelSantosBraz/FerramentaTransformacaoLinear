@@ -228,6 +228,18 @@ namespace AplicacaoTransformacoesLineares
             }
             Vetor fDUMaisFV = new Vetor(fDU.X + fDV.X, fDU.Y + fDV.Y, fDU.Z + fDV.Z);
             Vetor kVezesFDV = new Vetor(k * fDV.X, k * fDV.Y, k * fDV.Z);
+            fDUMaisFV.X = Math.Round(fDUMaisFV.X, 2);
+            fDUMaisFV.Y = Math.Round(fDUMaisFV.Y, 2);
+            fDUMaisFV.Z = Math.Round(fDUMaisFV.Z, 2);
+            fDuMaisV.X = Math.Round(fDuMaisV.X, 2);
+            fDuMaisV.Y = Math.Round(fDuMaisV.Y, 2);
+            fDuMaisV.Z = Math.Round(fDuMaisV.Z, 2);
+            fDKV.X = Math.Round(fDKV.X, 2);
+            fDKV.Y = Math.Round(fDKV.Y, 2);
+            fDKV.Z = Math.Round(fDKV.Z, 2);
+            kVezesFDV.X = Math.Round(kVezesFDV.X, 2);
+            kVezesFDV.Y = Math.Round(kVezesFDV.Y, 2);
+            kVezesFDV.Z = Math.Round(kVezesFDV.Z, 2);
             if (fDUMaisFV.X != fDuMaisV.X || fDUMaisFV.Y != fDuMaisV.Y || fDUMaisFV.Z != fDuMaisV.Z)
             {
                 return false;
@@ -237,6 +249,114 @@ namespace AplicacaoTransformacoesLineares
                 return false;
             }
             return true;
+        }
+
+        public Vetor aplicarTransformacaoLinear(String funcao, Vetor u)
+        {
+            String fU = funcao;
+            fU = fU.Replace("x", (u.X).ToString());
+            fU = fU.Replace("y", (u.Y).ToString());
+            fU = fU.Replace("z", (u.Z).ToString());
+            String[] d1 = fU.Split('=');            
+            String[] d2 = d1[1].Split(',');
+            if (d2.Length == 1)
+            {
+                String[] d3 = d2[0].Split("+-*/".ToCharArray());
+                for (int c = 0; c < d3.Length; c++)
+                {
+                    if (d3[c].Contains("^"))
+                    {
+                        String[] d4 = d3[c].Split('^');
+                        String exibir = d4[0];
+                        String exibir2 = d4[1];
+                        if (d4[0] == "x")
+                        {
+                            exibir = u.X.ToString();
+                        }
+                        else if (d4[0] == "y")
+                        {
+                            exibir = u.Y.ToString();
+                        }
+                        else if (d4[0] == "z")
+                        {
+                            exibir = u.Z.ToString();
+                        }
+                        if (d4[1] == "x")
+                        {
+                            exibir2 = u.X.ToString();
+                        }
+                        else if (d4[1] == "y")
+                        {
+                            exibir2 = u.Y.ToString();
+                        }
+                        else if (d4[1] == "z")
+                        {
+                            exibir2 = u.Z.ToString();
+                        }
+                        fU = fU.Replace(d4[0] + "^" + d4[1], Math.Pow((Double.Parse(exibir)), Double.Parse(exibir2)).ToString());
+                    }
+                }
+            }
+            else if (d2.Length == 2 || d2.Length == 3)
+            {
+                for (int i = 0; i < d2.Length; i++)
+                {
+                    String[] d3 = d2[i].Split("+-*/".ToCharArray());
+                    for (int c = 0; c < d3.Length; c++)
+                    {
+                        if (d3[c].Contains("^"))
+                        {
+                            String[] d4 = d3[c].Split('^');
+                            String exibir = d4[0];
+                            String exibir2 = d4[1];
+                            if (d4[0] == "x")
+                            {
+                                exibir = u.X.ToString();
+                            }
+                            else if (d4[0] == "y")
+                            {
+                                exibir = u.Y.ToString();
+                            }
+                            else if (d4[0] == "z")
+                            {
+                                exibir = u.Z.ToString();
+                            }
+                            if (d4[1] == "x")
+                            {
+                                exibir2 = u.X.ToString();
+                            }
+                            else if (d4[1] == "y")
+                            {
+                                exibir2 = u.Y.ToString();
+                            }
+                            else if (d4[1] == "z")
+                            {
+                                exibir2 = u.Z.ToString();
+                            }
+                            fU = fU.Replace(d4[0] + "^" + d4[1], Math.Pow((Double.Parse(exibir)), Double.Parse(exibir2)).ToString());
+                        }
+                    }
+                }
+            }
+            String[] d5 = fU.Split('=');
+            String[] d6 = d5[1].Split(',');
+            Vetor resultante = new Vetor();
+            for (int c = 0; c < d6.Length; c++)
+            {
+                if (c == 0)
+                {
+                    resultante.X = Convert.ToDouble(new DataTable().Compute(d6[c], null));
+                }
+                else if (c == 1)
+                {
+                    resultante.Y = Convert.ToDouble(new DataTable().Compute(d6[c], null));
+                }
+                else if (c == 2)
+                {
+                    resultante.Z = Convert.ToDouble(new DataTable().Compute(d6[c], null));
+                }
+            }
+            return resultante;
         }
     }
 }
