@@ -35,10 +35,9 @@
             // 
             // botaoAplicar
             // 
-            this.botaoAplicar.Location = new System.Drawing.Point(340, 283);
-            this.botaoAplicar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botaoAplicar.Location = new System.Drawing.Point(255, 230);
             this.botaoAplicar.Name = "botaoAplicar";
-            this.botaoAplicar.Size = new System.Drawing.Size(188, 76);
+            this.botaoAplicar.Size = new System.Drawing.Size(141, 62);
             this.botaoAplicar.TabIndex = 0;
             this.botaoAplicar.Text = "Aplicar Transformação";
             this.botaoAplicar.UseVisualStyleBackColor = true;
@@ -46,10 +45,9 @@
             // 
             // botaoDescobrir
             // 
-            this.botaoDescobrir.Location = new System.Drawing.Point(536, 283);
-            this.botaoDescobrir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botaoDescobrir.Location = new System.Drawing.Point(402, 230);
             this.botaoDescobrir.Name = "botaoDescobrir";
-            this.botaoDescobrir.Size = new System.Drawing.Size(188, 76);
+            this.botaoDescobrir.Size = new System.Drawing.Size(141, 62);
             this.botaoDescobrir.TabIndex = 1;
             this.botaoDescobrir.Text = "Descobrir Transformação";
             this.botaoDescobrir.UseVisualStyleBackColor = true;
@@ -57,14 +55,14 @@
             // 
             // FormInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 391);
+            this.ClientSize = new System.Drawing.Size(565, 318);
             this.Controls.Add(this.botaoDescobrir);
             this.Controls.Add(this.botaoAplicar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
