@@ -43,8 +43,6 @@ namespace AplicacaoTransformacoesLineares
                 label14.Visible = true;
                 textBoxFunc.Visible = true;
                 textBoxVetorResultante.Visible = true;
-                double result = Convert.ToDouble(new DataTable().Compute(Math.Pow(2,3)+" + 1 + 0.5 * 7", null));
-                textBoxVetorResultante.Text = result.ToString();
                 panelR1.Visible = true;
                 panelR2.Visible = false;
                 panelR3.Visible = false;
@@ -75,6 +73,17 @@ namespace AplicacaoTransformacoesLineares
                 panelR2.Visible = false;
                 panelR3.Visible = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Vetor u = new Vetor();
+            u.X = 5;
+            u.Y = 2;
+            Vetor v = new Vetor();
+            v.X = 1;
+            v.Y = 2;
+            Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=2*x^2,x^2,x", u, v);
         }
     }
 }
