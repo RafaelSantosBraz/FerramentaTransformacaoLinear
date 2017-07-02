@@ -35,22 +35,43 @@ namespace AplicacaoTransformacoesLineares
 
         private void comboBoxEspaco_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEspaco.Text == "R")
+            if (comboBoxEspacoOrigem.Text == "R")
             {
-                panelR.Visible = true;
-                //double result = Convert.ToDouble(new DataTable().Compute("1 + 2 * 7", null));
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorResultante.Visible = true;
+                double result = Convert.ToDouble(new DataTable().Compute(Math.Pow(2,3)+" + 1 + 0.5 * 7", null));
+                textBoxVetorResultante.Text = result.ToString();
+                panelR1.Visible = true;
                 panelR2.Visible = false;
                 panelR3.Visible = false;
             }
-            if (comboBoxEspaco.Text == "R²")
+            if (comboBoxEspacoOrigem.Text == "R²")
             {
-                panelR.Visible = false;
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorResultante.Visible = true;
+
+                panelR1.Visible = false;
                 panelR2.Visible = true;
                 panelR3.Visible = false;
             }
-            if (comboBoxEspaco.Text == "R³")
+            if (comboBoxEspacoOrigem.Text == "R³")
             {
-                panelR.Visible = false;
+                graficoAplicar.Visible = true;
+                label13.Visible = true;
+                label11.Visible = true;
+                label14.Visible = true;
+                textBoxFunc.Visible = true;
+                textBoxVetorResultante.Visible = true;
+
+                panelR1.Visible = false;
                 panelR2.Visible = false;
                 panelR3.Visible = true;
             }
