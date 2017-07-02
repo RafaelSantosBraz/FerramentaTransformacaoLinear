@@ -77,16 +77,95 @@ namespace AplicacaoTransformacoesLineares
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Vetor u = new Vetor();
-            u.X = 1;
-            u.Y = 0;
-            u.Z = 0;
-            Vetor v = new Vetor();
-            v.X = 2;
-            v.Y = 0;
-            v.Z = 0;
-            Boolean resp = Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=0.2*x", u, v);
-            Vetor r = Init.Nucleo.aplicarTransformacaoLinear("f(x,y)=0.2*x", u);
+            Vetor u;
+            Vetor v;
+            if (comboBoxEspacoOrigem.Text == "R")
+            {
+                if (textBox1.Text == "" || textBoxFunc.Text == "")
+                {
+                    MessageBox.Show("Todos os campos devem ser preenchidos!", "AVISO");
+                    return;
+                }
+                else
+                {
+                    double aux;
+                    if (Double.TryParse(textBox1.Text, out aux))
+                    {
+                        u = new Vetor(aux, 0, 0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Entrada fora do padrão esperado!", "AVISO");
+                        return;
+                    }
+                }
+            }
+            else if (comboBoxEspacoOrigem.Text == "R²")
+            {
+                if (textBox2.Text == "" || textBox3.Text == "" || textBoxFunc.Text == "")
+                {
+                    MessageBox.Show("Todos os campos devem ser preenchidos!", "AVISO");
+                    return;
+                }
+                else
+                {
+                    double aux, aux2;
+                    if (!Double.TryParse(textBox2.Text, out aux) || !Double.TryParse(textBox3.Text, out aux2))
+                    {
+                        MessageBox.Show("Entrada fora do padrão esperado!", "AVISO");
+                        return;
+                    }
+                    u = new Vetor(aux, aux2, 0);
+                }
+            }
+            else if (comboBoxEspacoOrigem.Text == "R³")
+            {
+                if (textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBoxFunc.Text == "")
+                {
+                    MessageBox.Show("Todos os campos devem ser preenchidos!", "AVISO");
+                    return;
+                }
+                else
+                {
+                    double aux, aux2, aux3;
+                    if (!Double.TryParse(textBox4.Text, out aux) || !Double.TryParse(textBox5.Text, out aux2) || !Double.TryParse(textBox6.Text, out aux3))
+                    {
+                        MessageBox.Show("Entrada fora do padrão esperado!", "AVISO");
+                        return;
+                    }
+                    u = new Vetor(aux, aux2, aux3);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione o espaço e preencha o vetor!", "AVISO");
+                return;
+            }
+            Boolean resultado = Init.Nucleo.VerificarTransformacaoLinear(textBoxFunc.Text, u, new Vetor(u.X + 1, u.Y + 1, u.Z + 1));
+            if (!resultado)
+            {
+                MessageBox.Show("A função informada NÃO é Transformação Linear!", "AVISO");
+            }
+            Vetor resultante = Init.Nucleo.aplicarTransformacaoLinear(textBoxFunc.Text, u);
+            if (Init.Nucleo.verificarEspaco(textBoxFunc.Text) == 1)
+            {
+                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + ")";
+            }
+            else if (Init.Nucleo.verificarEspaco(textBoxFunc.Text) == 2)
+            {
+                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + "," + resultante.Y + ")";
+                graficoAplicar.Series[0].Points.AddXY(0, 0);
+                graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
+                graficoAplicar.Series.Add("r");
+                graficoAplicar.Series[1].ChartType = graficoAplicar.Series[0].ChartType;
+                graficoAplicar.Series[1].BorderWidth = 5;
+                graficoAplicar.Series[1].Points.AddXY(0, 0);
+                graficoAplicar.Series[1].Points.AddXY(resultante.X, resultante.Y);
+            }
+            else
+            {
+                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + "," + resultante.Y + "," + resultante.Z + ")";
+            }
         }
     }
 }

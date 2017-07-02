@@ -257,7 +257,7 @@ namespace AplicacaoTransformacoesLineares
             fU = fU.Replace("x", (u.X).ToString());
             fU = fU.Replace("y", (u.Y).ToString());
             fU = fU.Replace("z", (u.Z).ToString());
-            String[] d1 = fU.Split('=');            
+            String[] d1 = fU.Split('=');
             String[] d2 = d1[1].Split(',');
             if (d2.Length == 1)
             {
@@ -357,6 +357,14 @@ namespace AplicacaoTransformacoesLineares
                 }
             }
             return resultante;
+        }
+
+        public int verificarEspaco(String funcao)
+        {
+            String fU = funcao;
+            String[] d1 = fU.Split('=');
+            String[] d2 = d1[1].Split(',');
+            return d2.Length;
         }
     }
 }
