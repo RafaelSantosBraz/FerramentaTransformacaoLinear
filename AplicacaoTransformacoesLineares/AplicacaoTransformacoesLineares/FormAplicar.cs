@@ -15,6 +15,7 @@ namespace AplicacaoTransformacoesLineares
         public FormAplicar()
         {
             InitializeComponent();
+            graficoAplicar.Series[0].Points.AddXY(10, 10);
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -37,38 +38,18 @@ namespace AplicacaoTransformacoesLineares
         {
             if (comboBoxEspacoOrigem.Text == "R")
             {
-                graficoAplicar.Visible = true;
-                label13.Visible = true;
-                label11.Visible = true;
-                label14.Visible = true;
-                textBoxFunc.Visible = true;
-                textBoxVetorResultante.Visible = true;
                 panelR1.Visible = true;
                 panelR2.Visible = false;
                 panelR3.Visible = false;
             }
             if (comboBoxEspacoOrigem.Text == "R²")
             {
-                graficoAplicar.Visible = true;
-                label13.Visible = true;
-                label11.Visible = true;
-                label14.Visible = true;
-                textBoxFunc.Visible = true;
-                textBoxVetorResultante.Visible = true;
-
                 panelR1.Visible = false;
                 panelR2.Visible = true;
                 panelR3.Visible = false;
             }
             if (comboBoxEspacoOrigem.Text == "R³")
             {
-                graficoAplicar.Visible = true;
-                label13.Visible = true;
-                label11.Visible = true;
-                label14.Visible = true;
-                textBoxFunc.Visible = true;
-                textBoxVetorResultante.Visible = true;
-
                 panelR1.Visible = false;
                 panelR2.Visible = false;
                 panelR3.Visible = true;
@@ -153,6 +134,7 @@ namespace AplicacaoTransformacoesLineares
             }
             else if (Init.Nucleo.verificarEspaco(textBoxFunc.Text) == 2)
             {
+                graficoAplicar.Series[0].Points.Clear();
                 textBoxVetorResultante.Text = "f(r)=(" + resultante.X + "," + resultante.Y + ")";
                 graficoAplicar.Series[0].Points.AddXY(0, 0);
                 graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
