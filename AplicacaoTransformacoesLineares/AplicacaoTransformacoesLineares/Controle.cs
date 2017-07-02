@@ -27,8 +27,31 @@ namespace AplicacaoTransformacoesLineares
         public Form TelaInicial { get => telaInicial; set => telaInicial = value; }
         public Form TelaInit { get => telaInit; set => telaInit = value; }
 
-        public Boolean verificarTransformacaoLinear(String funcao)
+        public Boolean VerificarTransformacaoLinear(String funcao, Vetor u, Vetor v)
         {
+            String[] d1 = funcao.Split('=');
+
+            if (d1.Length != 2)
+            {
+                return false;
+            }
+            String[] d2 = d1[1].Split(',');
+            if (d2.Length == 1)
+            {
+                if (d2[0].Contains('^'))
+                {
+                    
+                }
+            } else if (d2.Length == 2)
+            {
+
+            } else if (d2.Length == 3)
+            {
+
+            } else
+            {
+                return false;
+            }
             return true;
         }
     }
