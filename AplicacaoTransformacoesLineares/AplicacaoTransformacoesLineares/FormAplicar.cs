@@ -78,12 +78,12 @@ namespace AplicacaoTransformacoesLineares
         private void button1_Click(object sender, EventArgs e)
         {
             Vetor u = new Vetor();
-            u.X = 5;
+            u.X = 1;
             u.Y = 2;
             Vetor v = new Vetor();
-            v.X = 1;
-            v.Y = 2;
-            Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=2*x^2,x^2,x", u, v);
+            v.X = 2;
+            v.Y = 3;
+            Init.Nucleo.VerificarTransformacaoLinear("f(x,y)=x+y,x-y", u, v);
         }
     }
 }
