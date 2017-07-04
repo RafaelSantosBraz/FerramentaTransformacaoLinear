@@ -25,12 +25,14 @@ namespace AplicacaoTransformacoesLineares
 
         private void Aplicar_Click(object sender, EventArgs e)
         {
+            Init.Nucleo.TelaAplicar = new FormAplicar();
             Init.Nucleo.TelaAplicar.Show();
             this.Visible = false;
         }
 
         private void botaoDescobrir_Click(object sender, EventArgs e)
         {
+            Init.Nucleo.TelaDescobrir = new FormDescobrir();
             Init.Nucleo.TelaDescobrir.Show();
             this.Visible = false;
         }

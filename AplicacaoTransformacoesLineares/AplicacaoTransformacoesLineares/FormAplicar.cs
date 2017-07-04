@@ -38,28 +38,28 @@ namespace AplicacaoTransformacoesLineares
         {
             if (comboBoxEspacoOrigem.Text == "R")
             {
-                panelR1.Visible = true;
-                panelR2.Visible = false;
-                panelR3.Visible = false;
+                panel1.Visible = true;
+                panel2.Visible = false;
+                panel3.Visible = false;
             }
             if (comboBoxEspacoOrigem.Text == "R²")
             {
-                panelR1.Visible = false;
-                panelR2.Visible = true;
-                panelR3.Visible = false;
+                panel1.Visible = false;
+                panel2.Visible = true;
+                panel3.Visible = false;
             }
             if (comboBoxEspacoOrigem.Text == "R³")
             {
-                panelR1.Visible = false;
-                panelR2.Visible = false;
-                panelR3.Visible = true;
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = true;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Vetor u;
-            Vetor v;
+            Vetor u = new Vetor();
+            Vetor v = new Vetor();
             if (comboBoxEspacoOrigem.Text == "R")
             {
                 if (textBox1.Text == "" || textBoxFunc.Text == "")
@@ -126,28 +126,55 @@ namespace AplicacaoTransformacoesLineares
             if (!resultado)
             {
                 MessageBox.Show("A função informada NÃO é Transformação Linear!", "AVISO");
+                return;
             }
             Vetor resultante = Init.Nucleo.aplicarTransformacaoLinear(textBoxFunc.Text, u);
             if (Init.Nucleo.verificarEspaco(textBoxFunc.Text) == 1)
             {
-                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + ")";
+                textBoxVetorResultante.Text = "r=(" + resultante.X + ")";
             }
             else if (Init.Nucleo.verificarEspaco(textBoxFunc.Text) == 2)
             {
-                graficoAplicar.Series[0].Points.Clear();
-                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + "," + resultante.Y + ")";
-                graficoAplicar.Series[0].Points.AddXY(0, 0);
-                graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
-                graficoAplicar.Series.Add("r");
-                graficoAplicar.Series[1].ChartType = graficoAplicar.Series[0].ChartType;
-                graficoAplicar.Series[1].BorderWidth = 5;
-                graficoAplicar.Series[1].Points.AddXY(0, 0);
-                graficoAplicar.Series[1].Points.AddXY(resultante.X, resultante.Y);
+                textBoxVetorResultante.Text = "r=(" + resultante.X + "," + resultante.Y + ")";
+                if (comboBoxEspacoOrigem.Text == "R²")
+                {
+                    graficoAplicar.Series[0].Points.Clear();
+                    graficoAplicar.Series[1].Points.Clear();
+                    graficoAplicar.Series[0].Points.AddXY(0, 0);
+                    graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
+                    graficoAplicar.Series[1].Points.AddXY(0, 0);
+                    graficoAplicar.Series[1].Points.AddXY(resultante.X, resultante.Y);
+                }
+                else
+                {
+                    graficoAplicar.Series[0].Points.Clear();
+                    graficoAplicar.Series[1].Points.Clear();
+                    graficoAplicar.Series[0].Points.AddXY(10, 10);
+                    graficoAplicar.Series[1].Points.AddXY(10, 10);
+                }
             }
             else
             {
-                textBoxVetorResultante.Text = "f(r)=(" + resultante.X + "," + resultante.Y + "," + resultante.Z + ")";
+                textBoxVetorResultante.Text = "r=(" + resultante.X + "," + resultante.Y + "," + resultante.Z + ")";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Init.Nucleo.TelaInit.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Init.Nucleo.TelaAplicar = new FormAplicar();
+            Init.Nucleo.TelaAplicar.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Init.Nucleo.TelaInicial.Show();
         }
     }
 }
