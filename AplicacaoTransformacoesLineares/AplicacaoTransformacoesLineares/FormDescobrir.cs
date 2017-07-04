@@ -89,6 +89,7 @@ namespace AplicacaoTransformacoesLineares
             graficoAplicar.Series[0].Points.Clear();
             graficoAplicar.Series[1].Points.Clear();
             graficoAplicar.Series[2].Points.Clear();
+            graficoAplicar.Series[0].Points.AddXY(10, 10);
             Vetor u = new Vetor(), v = new Vetor(), w = new Vetor();
             String funcaoU = "";
             String funcaoV = "";
@@ -131,6 +132,9 @@ namespace AplicacaoTransformacoesLineares
                         return;
                     }
                     u = new Vetor(Double.Parse(textBox18.Text), Double.Parse(textBox17.Text), 0);
+                    graficoAplicar.Series[0].Points.Clear();
+                    graficoAplicar.Series[1].Points.Clear();
+                    graficoAplicar.Series[2].Points.Clear();
                     graficoAplicar.Series[0].Points.AddXY(0, 0);
                     graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
                 }
@@ -189,6 +193,13 @@ namespace AplicacaoTransformacoesLineares
                     }
                     u = new Vetor(Double.Parse(textBox2.Text), Double.Parse(textBox1.Text), 0);
                     v = new Vetor(Double.Parse(textBox8.Text), Double.Parse(textBox9.Text), 0);
+                    graficoAplicar.Series[0].Points.Clear();
+                    graficoAplicar.Series[1].Points.Clear();
+                    graficoAplicar.Series[2].Points.Clear();
+                    graficoAplicar.Series[0].Points.AddXY(0, 0);
+                    graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
+                    graficoAplicar.Series[1].Points.AddXY(0, 0);
+                    graficoAplicar.Series[1].Points.AddXY(v.X, v.Y);
                 }
             }
             else if (comboBoxEspacoDestino.Text == "R²->R³")
@@ -248,6 +259,15 @@ namespace AplicacaoTransformacoesLineares
                     u = new Vetor(Double.Parse(textBox32.Text), Double.Parse(textBox31.Text), 0);
                     v = new Vetor(Double.Parse(textBox34.Text), Double.Parse(textBox33.Text), 0);
                     w = new Vetor(Double.Parse(textBox36.Text), Double.Parse(textBox35.Text), 0);
+                    graficoAplicar.Series[0].Points.Clear();
+                    graficoAplicar.Series[1].Points.Clear();
+                    graficoAplicar.Series[2].Points.Clear();
+                    graficoAplicar.Series[0].Points.AddXY(0, 0);
+                    graficoAplicar.Series[0].Points.AddXY(u.X, u.Y);
+                    graficoAplicar.Series[1].Points.AddXY(0, 0);
+                    graficoAplicar.Series[1].Points.AddXY(v.X, v.Y);
+                    graficoAplicar.Series[2].Points.AddXY(0, 0);
+                    graficoAplicar.Series[2].Points.AddXY(w.X, w.Y);
                 }
             }
             else if (comboBoxEspacoDestino.Text == "R³->R³")
