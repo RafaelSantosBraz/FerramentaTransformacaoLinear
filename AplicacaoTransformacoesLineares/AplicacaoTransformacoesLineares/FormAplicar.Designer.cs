@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAplicar));
             this.graficoAplicar = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBoxEspacoOrigem = new System.Windows.Forms.ComboBox();
@@ -74,27 +74,27 @@
             // 
             this.graficoAplicar.BackColor = System.Drawing.Color.Transparent;
             this.graficoAplicar.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.graficoAplicar.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.graficoAplicar.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.graficoAplicar.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.graficoAplicar.Legends.Add(legend6);
             this.graficoAplicar.Location = new System.Drawing.Point(20, 19);
             this.graficoAplicar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.graficoAplicar.Name = "graficoAplicar";
             this.graficoAplicar.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series7.BorderWidth = 5;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series7.Legend = "Legend1";
-            series7.Name = "u";
-            series7.YValuesPerPoint = 6;
-            series8.BorderWidth = 5;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series8.Legend = "Legend1";
-            series8.Name = "r";
-            this.graficoAplicar.Series.Add(series7);
-            this.graficoAplicar.Series.Add(series8);
+            series11.BorderWidth = 5;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series11.Legend = "Legend1";
+            series11.Name = "u";
+            series11.YValuesPerPoint = 6;
+            series12.BorderWidth = 5;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series12.Legend = "Legend1";
+            series12.Name = "r";
+            this.graficoAplicar.Series.Add(series11);
+            this.graficoAplicar.Series.Add(series12);
             this.graficoAplicar.Size = new System.Drawing.Size(500, 461);
             this.graficoAplicar.TabIndex = 0;
             this.graficoAplicar.Text = "chart1";
@@ -442,9 +442,11 @@
             // 
             // FormAplicar
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.CancelButton = this.button4;
             this.ClientSize = new System.Drawing.Size(941, 488);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);

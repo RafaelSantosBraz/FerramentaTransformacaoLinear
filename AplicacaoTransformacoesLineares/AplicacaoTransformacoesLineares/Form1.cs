@@ -41,5 +41,10 @@ namespace AplicacaoTransformacoesLineares
         {
             Init.Nucleo.TelaInit.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Init.Nucleo.TelaInit.Dispose();
+        }
     }
 }

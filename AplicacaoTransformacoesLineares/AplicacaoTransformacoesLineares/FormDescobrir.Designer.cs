@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDescobrir));
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxFunc = new System.Windows.Forms.TextBox();
@@ -390,34 +390,34 @@
             // 
             this.graficoAplicar.BackColor = System.Drawing.Color.Transparent;
             this.graficoAplicar.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.graficoAplicar.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.graficoAplicar.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.graficoAplicar.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graficoAplicar.Legends.Add(legend3);
             this.graficoAplicar.Location = new System.Drawing.Point(4, 11);
             this.graficoAplicar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.graficoAplicar.Name = "graficoAplicar";
             this.graficoAplicar.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.BorderWidth = 5;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Legend = "Legend1";
-            series1.Name = "u";
-            series1.YValuesPerPoint = 6;
-            series2.BorderWidth = 5;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.LabelBorderWidth = 5;
-            series2.Legend = "Legend1";
-            series2.Name = "v";
-            series3.BorderWidth = 5;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Legend = "Legend1";
-            series3.Name = "w";
-            this.graficoAplicar.Series.Add(series1);
-            this.graficoAplicar.Series.Add(series2);
-            this.graficoAplicar.Series.Add(series3);
+            series7.BorderWidth = 5;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series7.Legend = "Legend1";
+            series7.Name = "u";
+            series7.YValuesPerPoint = 6;
+            series8.BorderWidth = 5;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series8.LabelBorderWidth = 5;
+            series8.Legend = "Legend1";
+            series8.Name = "v";
+            series9.BorderWidth = 5;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series9.Legend = "Legend1";
+            series9.Name = "w";
+            this.graficoAplicar.Series.Add(series7);
+            this.graficoAplicar.Series.Add(series8);
+            this.graficoAplicar.Series.Add(series9);
             this.graficoAplicar.Size = new System.Drawing.Size(500, 461);
             this.graficoAplicar.TabIndex = 30;
             this.graficoAplicar.Text = "chart1";
@@ -1309,6 +1309,7 @@
             // 
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -1375,9 +1376,11 @@
             // 
             // FormDescobrir
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.CancelButton = this.button4;
             this.ClientSize = new System.Drawing.Size(1001, 488);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);

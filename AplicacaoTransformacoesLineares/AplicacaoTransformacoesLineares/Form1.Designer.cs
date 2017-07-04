@@ -39,7 +39,8 @@
             // 
             // botaoAplicar
             // 
-            this.botaoAplicar.Location = new System.Drawing.Point(39, 150);
+            this.botaoAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAplicar.Location = new System.Drawing.Point(571, 47);
             this.botaoAplicar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.botaoAplicar.Name = "botaoAplicar";
             this.botaoAplicar.Size = new System.Drawing.Size(235, 95);
@@ -50,7 +51,8 @@
             // 
             // botaoDescobrir
             // 
-            this.botaoDescobrir.Location = new System.Drawing.Point(614, 150);
+            this.botaoDescobrir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoDescobrir.Location = new System.Drawing.Point(571, 198);
             this.botaoDescobrir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.botaoDescobrir.Name = "botaoDescobrir";
             this.botaoDescobrir.Size = new System.Drawing.Size(235, 95);
@@ -62,7 +64,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(614, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 187);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(428, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1082, 287);
+            this.ClientSize = new System.Drawing.Size(854, 345);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.botaoDescobrir);
